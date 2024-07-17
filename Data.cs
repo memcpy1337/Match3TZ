@@ -4,8 +4,8 @@ namespace Match3TZ
 {
     static class Data
     {
-        const string Textures = "Data\\Textures\\";
-        const string Fonts = "Data\\Fonts\\";
+        const string Textures = "Textures\\";
+        const string Fonts = "Fonts\\";
 
         public static Texture Cell;
         public static Texture Red;

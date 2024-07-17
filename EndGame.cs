@@ -21,6 +21,7 @@ namespace Match3TZ
             okButton.Position = new Vector2f(180, 180);
             this.okPress = okPress;
             this.window = window;
+            
             ControlManager.MouseClick += MouseClick;
         }
 

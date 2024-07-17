@@ -20,10 +20,5 @@ namespace Match3TZ
         {
             return MathF.Abs(x - x0) + MathF.Abs(y - y0) == 1;
         }
-
-        public bool InBounds(int x, int y)
-        {
-            return x >= 1 && x <= 8 && y >= 1 && y <= 8;
-        }
     }
 }

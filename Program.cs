@@ -10,6 +10,7 @@ namespace Match3TZ
             Data.Load();
 
             RenderWindow gameWindow = new RenderWindow(new VideoMode(360, 360), "Матч 3 ТЗ");
+
             gameWindow.SetFramerateLimit(60);
             gameWindow.Closed += Window_Closed;
 

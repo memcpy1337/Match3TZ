@@ -23,6 +23,7 @@ namespace Match3TZ
         public Bonus Bonus = Bonus.Empty;
         public float TimeLastMoved = 0;
         public bool IsSelected = false;
+        public bool IsAnim = false;
 
         public CellTypes Type 
         {
@@ -52,9 +53,13 @@ namespace Match3TZ
             }
 
             if (dx != 0 || dy != 0)
-                return true;
+            {
+                IsAnim = true;
+                return IsAnim;
+            }
 
-            return false;
+            IsAnim = false;
+            return IsAnim;
         }
 
 

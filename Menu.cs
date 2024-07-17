@@ -14,7 +14,7 @@ namespace Match3TZ
         {
             playButton = new Sprite(texture: Data.PlayButton);
             playButton.Origin = new Vector2f(40, 16);
-            playButton.Scale = new Vector2f(2, 2);
+            playButton.Scale = new Vector2f(4, 4);
             playButton.Position = new Vector2f(180, 180);
             this.playPress = playPress;
             this.window = window;
