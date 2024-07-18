@@ -13,7 +13,7 @@ namespace Match3TZ
         private static Hud hud;
         private static Menu menu;
         private static EndGame endGame;
-        private static int gameTime = 30;
+        private static int gameTime = 60;
         private static GameState gameState;
         private static RenderWindow window;
 
