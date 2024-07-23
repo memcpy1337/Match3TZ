@@ -45,9 +45,9 @@ namespace Match3TZ
 
             SpritePool.CreatePool();
 
-            for (int x = 0; x < grid.GetUpperBound(0); x++)
+            for (int x = 0; x <= grid.GetUpperBound(0); x++)
             {
-                for (int y = 0; y < grid.GetUpperBound(1); y++)
+                for (int y = 0; y <= grid.GetUpperBound(1); y++)
                 {
                     grid[x, y] = new Cell();
                 }
@@ -88,7 +88,7 @@ namespace Match3TZ
                 clickField.x0 = (clickField.Pos.X + 16) / _size + 1;
                 clickField.y0 = (clickField.Pos.Y + 16) / _size + 1;
 
-                if (InBounds(clickField.x0, clickField.y0) == false)
+                if (InBounds(clickField.y0, clickField.x0) == false)
                 {
                     return;
                 }
@@ -108,7 +108,7 @@ namespace Match3TZ
                 clickField.x = (clickField.Pos.X + 16) / _size + 1;
                 clickField.y = (clickField.Pos.Y + 16) / _size + 1;
 
-                if (InBounds(clickField.x, clickField.y) == false)
+                if (InBounds(clickField.y, clickField.x) == false)
                 {
                     return;
                 }
@@ -425,14 +425,14 @@ namespace Match3TZ
             if (bonus == Bonus.LineVertical)
             {
                 var destroyer1 = new Destroyer(Row, Col, Col, 1, DestroyerTarget, DestroyDestroyer);
-                var destroyer2 = new Destroyer(Row, Col, Col, grid.GetUpperBound(1) - 2, DestroyerTarget, DestroyDestroyer);
+                var destroyer2 = new Destroyer(Row, Col, Col, grid.GetUpperBound(0) - 2, DestroyerTarget, DestroyDestroyer);
                 destroyers.Add(destroyer1);
                 destroyers.Add(destroyer2);
             }
             else if (bonus == Bonus.LineHorizontal)
             {
                 var destroyer1 = new Destroyer(Row, Col, 1, Row, DestroyerTarget, DestroyDestroyer);
-                var destroyer2 = new Destroyer(Row, Col, grid.GetUpperBound(0) - 2, Row, DestroyerTarget, DestroyDestroyer);
+                var destroyer2 = new Destroyer(Row, Col, grid.GetUpperBound(1) - 2, Row, DestroyerTarget, DestroyDestroyer);
                 destroyers.Add(destroyer1);
                 destroyers.Add(destroyer2);
             }
@@ -500,7 +500,7 @@ namespace Match3TZ
             {
                 for (int x = grid.GetUpperBound(0) - 2; x > 0; x--)
                 {
-                    for (int y = 1; y <= grid.GetUpperBound(0) - 2; y++)
+                    for (int y = 1; y <= grid.GetUpperBound(1) - 2; y++)
                     {
                         if (grid[x, y].Hit != 0)
                         {

@@ -6,8 +6,8 @@ namespace Match3TZ
     static class GameManager
     {
         public static int SizeCell = 32;
-        public static int Rows = 6;
-        public static int Cols = 6;
+        public static int Rows = 8;
+        public static int Cols = 8;
         public static Vector2i OffsetField = new Vector2i(64, 64);
         private static GameField gameField;
         private static Hud hud;
